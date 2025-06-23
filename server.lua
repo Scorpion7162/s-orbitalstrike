@@ -6,7 +6,7 @@ lib.addCommand('kaboom', {
         type = 'string'
     }},
     restricted = 'group.admin'
- }, function(source, args, raw)
+}, function(source, args, raw)
     local target = args.target
     if not target then
         TriggerClientEvent('ox_lib:notify', source, {
@@ -16,12 +16,12 @@ lib.addCommand('kaboom', {
         })
         return
     end
- 
-    if target == 'all' then           TriggerClientEvent('s-orbitalstrike:client', -1)
-        end
+
+    if target == 'all' then
+        TriggerClientEvent('s-orbitalstrike:client', -1)
         return
     end
- 
+
     local targetId = tonumber(target)
     if targetId and GetPlayerName(targetId) then
         TriggerClientEvent('s-orbitalstrike:client', targetId)
@@ -32,4 +32,4 @@ lib.addCommand('kaboom', {
             type = 'error'
         })
     end
- end)
+end)
