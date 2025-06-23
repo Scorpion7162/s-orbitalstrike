@@ -19,7 +19,7 @@ lib.addCommand('kaboom', {
  
     if target == 'all' then
         for _, playerId in ipairs(GetPlayers()) do
-            TriggerClientEvent('s-orbitalstrike:client', tonumber(playerId))
+            TriggerClientEvent('s-orbitalstrike:client', -1)
         end
         return
     end
