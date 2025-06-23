@@ -17,11 +17,13 @@ lib.addCommand('kaboom', {
         return
     end
 
+    -- Handle "all"
     if target == 'all' then
         TriggerClientEvent('s-orbitalstrike:client', -1)
         return
     end
 
+    -- Try to convert to number
     local targetId = tonumber(target)
     if targetId and GetPlayerName(targetId) then
         TriggerClientEvent('s-orbitalstrike:client', targetId)
